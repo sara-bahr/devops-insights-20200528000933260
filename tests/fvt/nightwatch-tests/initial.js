@@ -17,7 +17,7 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            '78641',
+            '0600',
             browser.Keys.ENTER
           ]);
     
@@ -53,6 +53,6 @@ module.exports = {
     
         await demodoi.waitForElementNotPresent('@table');
 
-        demodoi.expect.element('@invalidCity').text.to.equal('* should be a 5 digit number only');
+        demodoi.expect.element('@invalidCity').text.to.equal('* should be a 4 digit number only');
     },
 };

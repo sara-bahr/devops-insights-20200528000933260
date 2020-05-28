@@ -17,7 +17,7 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            'hamilton',
+            '78641',
             browser.Keys.ENTER
           ]);
     
@@ -32,7 +32,7 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            'canada',
+            '90000',
             browser.Keys.ENTER
           ]);
     
@@ -47,12 +47,12 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            '12334',
+            'ABCDE',
             browser.Keys.ENTER
           ]);
     
         await demodoi.waitForElementNotPresent('@table');
 
-        demodoi.expect.element('@invalidCity').text.to.equal('* should only consist of letters');
+        demodoi.expect.element('@invalidCity').text.to.equal('* should be a 5 digit number only');
     },
 };

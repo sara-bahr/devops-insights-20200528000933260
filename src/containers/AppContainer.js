@@ -18,21 +18,25 @@ function AppContainer(props) {
     const clearResponse = () => {
         setResponseData('');
     }
-
+    //add google maps here 
     return (
         <div>
             <div className="row mt-4">
                 <div className="col-sm-4"></div>
-                <Zip onZipChange={handleZipChange} clearResponse={clearResponse}/>
+                <Zip onZipChange={handleZipChange} clearResponse={clearResponse} />
+
                 <div className="col-sm-4"></div>
             </div>
             <div className="row mt-4">
                 <div className="col-sm-2"></div>
-                <ZipResponse responseData={responseData} clearResponse={clearResponse}/>
+                <ZipResponse responseData={responseData} clearResponse={clearResponse} />
                 <div className="col-sm-2"></div>
-            </div>    
+
+            </div>
+
         </div>
+
     );
 }
-  
+
 export default AppContainer
